@@ -1,19 +1,14 @@
-#include "0-putchar.c"
+#include <unistd.h>
+#include "main.h"
+
 /**
- * main - Entry point
+ * 0-putchar-write the character c to stdout
+ * @c: The charcter to print
  *
- * Return: Always 0 (Success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately
  */
-int main(void)
+int 0-putchar(char c)
 {
-	char *sh = "main";
-
-	while (*sh)
-	{
-		_putchar(*sh);
-		sh++;
-	}
-	_putchar('\n');
-
-	return (0);
+return (write(1, &c, 1))
 }
